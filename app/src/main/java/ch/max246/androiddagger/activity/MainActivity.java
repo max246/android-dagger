@@ -23,8 +23,8 @@ public class MainActivity extends BaseActivity {
     @Inject
     Log mLog;
 
-    //@Inject
-    //TestPackage pack;
+    @Inject
+    TestPackage pack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

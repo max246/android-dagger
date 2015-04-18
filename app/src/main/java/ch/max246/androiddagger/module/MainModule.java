@@ -14,7 +14,7 @@ import dagger.Provides;
  */
 @Module(
         injects = { MainActivity.class, App.class},
-        includes = {LogModule.class},
+        includes = {LogModule.class,TestContextModule.class},
         library =  true
 )
 public class MainModule {
