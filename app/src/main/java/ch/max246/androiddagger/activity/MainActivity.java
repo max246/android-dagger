@@ -1,5 +1,6 @@
 package ch.max246.androiddagger.activity;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,11 +16,15 @@ import ch.max246.androiddagger.R;
 import ch.max246.androiddagger.module.MainModule;
 import ch.max246.androiddagger.module.SplashScreenModule;
 import ch.max246.androiddagger.util.Log;
+import ch.max246.androiddagger.util.TestPackage;
 
 
 public class MainActivity extends BaseActivity {
     @Inject
     Log mLog;
+
+    //@Inject
+    //TestPackage pack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected List<Object> getModules() {
-        modules = Arrays.<Object>asList(new MainModule());
+        modules = Arrays.<Object>asList(new MainModule(this));
         return modules;
     }
 

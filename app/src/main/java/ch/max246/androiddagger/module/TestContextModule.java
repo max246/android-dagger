@@ -4,29 +4,27 @@ import android.content.Context;
 
 import javax.inject.Singleton;
 
-import ch.max246.androiddagger.App;
 import ch.max246.androiddagger.activity.MainActivity;
+import ch.max246.androiddagger.util.TestPackage;
 import dagger.Module;
 import dagger.Provides;
 
 /**
  * Created by christian on 18/04/15.
  */
-@Module(
-        injects = { MainActivity.class, App.class},
-        includes = {LogModule.class},
-        library =  true
+
+@Module (
+       library =  true
 )
-public class MainModule {
+public class TestContextModule {
 
     private Context mContext;
 
-    public  MainModule(Context context) {
+    public TestContextModule(Context context) {
         mContext = context;
     }
-
-     @Provides @Singleton
-     Context provideContext() {
-         return mContext;
-     }
+    @Provides @Singleton
+    TestPackage providePackage() {
+        return new TestPackage(mContext);
+    }
 }
