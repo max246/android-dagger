@@ -12,14 +12,9 @@ import dagger.Provides;
  * Created by christian on 18/04/15.
  */
 @Module(
-        injects = {SplashScreenActivity.class,  App.class }
+        injects = {SplashScreenActivity.class,  App.class },
+        includes = {LogModule.class}
 )
 public class SplashScreenModule {
-    @Provides
-    @Singleton
-    Log providePrint() {
-        return new Log();
-    }
-
 
 }

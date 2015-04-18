@@ -16,14 +16,6 @@ import dagger.Provides;
 )
 public class MainModule {
 
-/*
 
-    @Provides
-    @Singleton
-    LoginNetwork provideLoginNetwork(HttpManager httpManager) { return new LoginNetwork(httpManager); }
-
-    @Provides
-    @Singleton
-    HttpManager provideHttpManager() { return new HttpManager(); }*/
 
 }
